@@ -2,6 +2,7 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) { });
+
 function verificar() {
     let dato = document.getElementById("user");
     let contrasena = document.getElementById("key");
@@ -31,7 +32,9 @@ function verificar() {
 
 document.addEventListener("DOMContentLoaded", () => {
     let usuario = JSON.parse(localStorage.getItem("usuario"));
-    if (usuario.estado == "conectado") {
+    if (usuario == null){
+        console.log("No hay usuario");
+    }else if (usuario.estado == "conectado") {
         location.href = "home.html";
     }
 });
