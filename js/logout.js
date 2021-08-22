@@ -1,6 +1,7 @@
 function desconectar(){
-    localStorage.clear(); ///Borra todo el localStorage
-    signOut(); // Desconecto de Google
-    location.href="index.html"; //De donde esté, no importa dónde, me envía a home.html
 
+    localStorage.clear(); ///Borra todo el localStorage, para poder recargar la pagina
+    signOut(); // Desconecto de Google
+    location.href="index.html"; //Nos devuelve a a la pantalla de login
+    
 }
